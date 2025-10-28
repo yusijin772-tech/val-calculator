@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="부가세 계산기 - 공급가액, 부가세, 합계금액을 빠르고 정확하게 계산하세요">
+    <meta name="keywords" content="부가세, 계산기, 부가세계산, 세금계산서, 공급가액">
+    <title>부가세 계산기 - 빠르고 정확한 부가세 계산</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">택스헬퍼</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">부가세계산기</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/cards.html" class="nav-link">사업자카드 추천</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>부가세 계산기</h1>
+            <p class="subtitle">공급가액과 부가세를 쉽고 빠르게 계산하세요</p>
+        </header>
+
+        <!-- Main Calculator -->
+        <main>
+            <div class="calculator-card">
+                <!-- Tab Navigation -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="total">
+                        합계 금액을 알고 있는 경우
+                    </button>
+                    <button class="tab-btn" data-tab="supply">
+                        공급가액을 알고 있는 경우
+                    </button>
+                </div>
+
+                <!-- Tab Content: Total to Supply -->
+                <div class="tab-content active" id="total-tab">
+                    <div class="input-group">
+                        <label for="total-price">부가세 포함 금액</label>
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                id="total-price"
+                                placeholder="0"
+                                inputmode="numeric"
+                            >
+                            <span class="unit">원</span>
+                        </div>
+                    </div>
+
+                    <div class="calculation-divider"></div>
+
+                    <div class="result-group">
+                        <div class="result-item">
+                            <span class="label">부가세 (10%)</span>
+                            <span class="value" id="vat-reverse-result">0원</span>
+                        </div>
+                        <div class="result-item total">
+                            <span class="label">공급가액</span>
+                            <span class="value" id="supply-result">0원</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-calculate" onclick="calculateFromTotal()">
+                        계산하기
+                    </button>
+                </div>
+
+                <!-- Tab Content: Supply to Total -->
+                <div class="tab-content" id="supply-tab">
+                    <div class="input-group">
+                        <label for="supply-price">공급가액</label>
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                id="supply-price"
+                                placeholder="0"
+                                inputmode="numeric"
+                            >
+                            <span class="unit">원</span>
+                        </div>
+                    </div>
+
+                    <div class="calculation-divider"></div>
+
+                    <div class="result-group">
+                        <div class="result-item">
+                            <span class="label">부가세 (10%)</span>
+                            <span class="value" id="vat-result">0원</span>
+                        </div>
+                        <div class="result-item total">
+                            <span class="label">합계금액</span>
+                            <span class="value" id="total-result">0원</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-calculate" onclick="calculateFromSupply()">
+                        계산하기
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <h2>💡 부가세 계산 방법</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>부가세란?</h3>
+                        <p>부가가치세(VAT)는 상품이나 서비스 거래 시 부과되는 세금으로, <strong>10%</strong>가 적용됩니다.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>계산 공식</h3>
+                        <ul>
+                            <li><strong>부가세</strong> = 공급가액 × 10%</li>
+                            <li><strong>합계</strong> = 공급가액 + 부가세</li>
+                            <li><strong>공급가액</strong> = 합계 ÷ 1.1</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>계산 예시</h3>
+                        <p>공급가액 100,000원인 경우:</p>
+                        <ul>
+                            <li>부가세: 10,000원</li>
+                            <li>합계: 110,000원</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>신고 기간</h3>
+                        <ul>
+                            <li>1기(1~6월): 7월 1일 ~ 7월 25일</li>
+                            <li>2기(7~12월): 다음해 1월 1일 ~ 1월 25일</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <div class="cta-card cta-card-full">
+                    <h3>💳 남들과 똑같은 세금을 내는데 <br class="mobile-break">혜택은 못받으셨나요?</h3>
+                    <p>사업자라면 꼭 확인하세요!</p>
+                    <a href="/cards.html" class="btn-cta">사업자카드 혜택 보기 →</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>본 계산기는 참고용이며, 실제 세금과 차이가 있을 수 있습니다.</p>
+            <p>정확한 세무 상담은 전문가와 상의하시기 바랍니다.</p>
+            <p class="copyright">© 2025 부가세 계산기. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

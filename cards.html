@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사업자카드 추천 - 택스헬퍼</title>
+    <link rel="stylesheet" href="cards-styles.css">
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">택스헬퍼</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">부가세계산기</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/cards.html" class="nav-link active">사업자카드 추천</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 헤더 섹션 -->
+            <section class="header-section">
+                <h1 class="page-title">세금 납부 시 혜택 받는 카드</h1>
+                <p class="page-subtitle">국세/지방세 납부 시 마일리지·포인트를 적립받을 수 있는 카드를 추천합니다</p>
+            </section>
+
+            <!-- 필터 섹션 -->
+            <section class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">전체</button>
+                    <button class="filter-btn" data-filter="national">국세 적립</button>
+                    <button class="filter-btn" data-filter="local">지방세 적립</button>
+                    <button class="filter-btn" data-filter="low-fee">연회비 3만원 이하</button>
+                </div>
+            </section>
+
+            <!-- 카드 그리드 -->
+            <section class="cards-grid">
+                <!-- 카드 1: KB국민 마일리지 가온카드 -->
+                <div class="card-item" data-national="true" data-local="false" data-fee="15000">
+                    <div class="card-image">
+                        <img src="https://img1.kbcard.com/ST/img/cxc/kbcard/upload/img/product/09153_img.png" alt="KB국민 마일리지 가온카드">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">마일리지 가온카드 (대한항공)</h3>
+                        <p class="card-company">KB국민카드</p>
+
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span class="info-label">마일리지 적립</span>
+                                <span class="info-value">1,500원당 1마일</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">연회비</span>
+                                <span class="info-value">15,000원</span>
+                            </div>
+                        </div>
+
+                        <div class="card-details">
+                            <p class="detail-item">• 해외/면세점 1,500원당 2마일</p>
+                        </div>
+
+                        <div class="tax-benefits">
+                            <span class="tax-tag available">국세 ✓</span>
+                            <span class="tax-tag unavailable">지방세 ✗</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 카드 3: 신한카드 Air Platinum -->
+                <div class="card-item" data-national="true" data-local="false" data-fee="40000">
+                    <div class="card-image">
+                        <img src="https://www.shinhancard.com/pconts/images/contents/card/plate/cdCreaditAFJAPT.png" alt="신한카드 Air Platinum">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Air Platinum</h3>
+                        <p class="card-company">신한카드</p>
+
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span class="info-label">마일리지 적립</span>
+                                <span class="info-value">1,500원당 1마일</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">연회비</span>
+                                <span class="info-value">40,000원</span>
+                            </div>
+                        </div>
+
+                        <div class="card-details">
+                            <p class="detail-item">• 전 가맹점 일시불/할부 적립</p>
+                        </div>
+
+                        <div class="tax-benefits">
+                            <span class="tax-tag available">국세 ✓</span>
+                            <span class="tax-tag unavailable">지방세 ✗</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 카드 3: NH농협 클래시 트래블카드 -->
+                <div class="card-item" data-national="true" data-local="true" data-fee="120000">
+                    <div class="card-image">
+                        <img src="https://card.nonghyup.com/content/imgs/shopmall/pro_img/card/F107942.png" alt="NH농협 클래시 트래블카드">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">클래시 트래블카드</h3>
+                        <p class="card-company">NH농협카드</p>
+
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span class="info-label">포인트 적립</span>
+                                <span class="info-value">국내 1.2%</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">연회비</span>
+                                <span class="info-value">120,000원</span>
+                            </div>
+                        </div>
+
+                        <div class="card-details">
+                            <p class="detail-item">• 해외 가맹점 3-4% 적립</p>
+                            <p class="detail-item">• 공항라운지 월 2회, 연 4회</p>
+                        </div>
+
+                        <div class="tax-benefits">
+                            <span class="tax-tag available">국세 ✓</span>
+                            <span class="tax-tag available">지방세 ✓</span>
+                            <span class="tax-tag available">4대보험 ✓</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 안내 섹션 -->
+            <section class="info-section">
+                <div class="info-box warning">
+                    <h3>⚠️ 주의사항</h3>
+                    <ul>
+                        <li>국세 납부 시 신용카드 수수료 0.8%, 체크카드 0.5%가 부과됩니다</li>
+                        <li>지방세 납부는 수수료가 없습니다</li>
+                        <li>카드사별 세부 약관을 확인하시기 바랍니다</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 택스헬퍼. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cards-script.js"></script>
+</body>
+</html>
