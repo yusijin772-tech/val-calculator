@@ -1,0 +1,22 @@
+{
+  "name": "택스헬퍼 - 부가세 계산기",
+  "short_name": "택스헬퍼",
+  "description": "부가세 계산 & 사업자카드 추천",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#7c3aed",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait"
+}
