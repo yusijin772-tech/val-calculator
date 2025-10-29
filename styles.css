@@ -413,6 +413,134 @@ header h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Partnership Link */
+.partnership-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.partnership-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Partnership Form Container */
+.partnership-form-container {
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin: 20px 0;
+    border: 2px solid var(--border-color);
+}
+
+.partnership-description {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.contact-email {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.partnership-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background-color: var(--bg-primary);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.form-message.error {
+    display: block;
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -609,6 +737,34 @@ footer p {
         word-break: keep-all;
     }
 
+    .partnership-form-container {
+        padding: 20px 15px;
+    }
+
+    .partnership-description {
+        font-size: 0.9rem;
+        word-break: keep-all;
+    }
+
+    .contact-email {
+        font-size: 0.85rem;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 12px 14px;
+    }
+
+    .btn-submit {
+        font-size: 1rem;
+        padding: 14px;
+    }
+
     footer {
         padding: 30px 15px;
         font-size: 0.85rem;
@@ -713,5 +869,37 @@ footer p {
     .btn-cta {
         padding: 10px 24px;
         font-size: 0.9rem;
+    }
+
+    .partnership-form-container {
+        padding: 15px 12px;
+    }
+
+    .partnership-description {
+        font-size: 0.85rem;
+    }
+
+    .contact-email {
+        font-size: 0.8rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .btn-submit {
+        font-size: 0.95rem;
+        padding: 13px;
+    }
+
+    .form-message {
+        font-size: 0.9rem;
+        padding: 12px;
     }
 }

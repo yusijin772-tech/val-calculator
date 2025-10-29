@@ -158,8 +158,53 @@
 
         <!-- Footer -->
         <footer>
+            <p><a href="#" id="partnership-toggle" class="partnership-link">제휴 문의</a></p>
+
+            <!-- Partnership Contact Form (Hidden by default) -->
+            <div id="partnership-form-container" class="partnership-form-container" style="display: none;">
+                <p class="partnership-description">사업 제안이나 제휴 문의를 남겨주시면 빠르게 연락드리겠습니다.</p>
+
+                <form id="partnership-form" class="partnership-form">
+                    <div class="form-group">
+                        <label for="inquiry-message">문의내용 *</label>
+                        <textarea
+                            id="inquiry-message"
+                            name="message"
+                            rows="5"
+                            placeholder="제휴 제안이나 문의 사항을 자유롭게 작성해주세요"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry-email">이메일 *</label>
+                        <input
+                            type="email"
+                            id="inquiry-email"
+                            name="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry-phone">연락처 (선택)</label>
+                        <input
+                            type="tel"
+                            id="inquiry-phone"
+                            name="phone"
+                            placeholder="010-1234-5678"
+                        >
+                    </div>
+
+                    <button type="submit" class="btn-submit">문의하기</button>
+                </form>
+
+                <div id="form-message" class="form-message"></div>
+            </div>
+
             <p>본 계산기는 참고용이며, 실제 세금과 차이가 있을 수 있습니다.</p>
-            <p>정확한 세무 상담은 전문가와 상의하시기 바랍니다.</p>
+            <p class="contact-email">이메일: hadas91@naver.com</p>
             <p class="copyright">© 2025 부가세 계산기. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">이용약관</a>
@@ -168,6 +213,8 @@
         </footer>
     </div>
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

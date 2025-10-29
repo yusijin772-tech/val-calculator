@@ -151,3 +151,80 @@ document.querySelectorAll('.result-item .value').forEach(element => {
         copyToClipboard(value.toString());
     });
 });
+
+// 제휴 문의 폼 토글 기능
+document.addEventListener('DOMContentLoaded', function() {
+    const partnershipToggle = document.getElementById('partnership-toggle');
+    const partnershipFormContainer = document.getElementById('partnership-form-container');
+
+    if (partnershipToggle && partnershipFormContainer) {
+        partnershipToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (partnershipFormContainer.style.display === 'none') {
+                partnershipFormContainer.style.display = 'block';
+                // 부드럽게 스크롤
+                setTimeout(() => {
+                    partnershipFormContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            } else {
+                partnershipFormContainer.style.display = 'none';
+            }
+        });
+    }
+});
+
+// EmailJS 초기화 및 제휴 문의 폼 처리
+(function() {
+    // EmailJS 초기화
+    emailjs.init('8uniCaJsl270ivAvV');
+
+    const partnershipForm = document.getElementById('partnership-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (partnershipForm) {
+        partnershipForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // 제출 버튼 비활성화
+            const submitBtn = partnershipForm.querySelector('.btn-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '전송 중...';
+            submitBtn.disabled = true;
+
+            // 메시지 초기화
+            formMessage.className = 'form-message';
+            formMessage.style.display = 'none';
+
+            // EmailJS로 이메일 전송
+            emailjs.sendForm('service_b0vos76', 'template_tbeljf3', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+
+                    // 성공 메시지 표시
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = '문의가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다.';
+
+                    // 폼 초기화
+                    partnershipForm.reset();
+
+                    // 3초 후 메시지 숨기기
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 5000);
+
+                }, function(error) {
+                    console.log('FAILED...', error);
+
+                    // 에러 메시지 표시
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = '문의 전송에 실패했습니다. 잠시 후 다시 시도해주세요.';
+                })
+                .finally(function() {
+                    // 제출 버튼 활성화
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+})();
