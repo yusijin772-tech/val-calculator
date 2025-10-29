@@ -6,6 +6,10 @@
     <meta name="description" content="부가세 계산기 - 공급가액, 부가세, 합계금액을 빠르고 정확하게 계산하세요. 국세·지방세 혜택 사업자카드 추천까지!">
     <meta name="keywords" content="부가세, 계산기, 부가세계산, 세금계산서, 공급가액, 사업자카드, 국세납부, 지방세납부">
     <meta name="google-site-verification" content="V6oFqZYaI_ZeVPtChdE9mjBsWF4xewjYDHQ-oab1PAc" />
+    <meta name="naver-site-verification" content="6f8ac37b6ec8a41a1c76e5ff9c453b370435a148" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://val-calculator.vercel.app/">
 
     <!-- Open Graph / 소셜 미디어 -->
     <meta property="og:type" content="website">
@@ -14,6 +18,10 @@
     <meta property="og:url" content="https://val-calculator.vercel.app/">
     <meta property="og:site_name" content="택스헬퍼">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:image" content="https://val-calculator.vercel.app/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="택스헬퍼 부가세 계산기">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
@@ -22,7 +30,101 @@
     <meta name="twitter:domain" content="택스헬퍼">
 
     <title>택스헬퍼 - 부가세 계산기 & 사업자카드 추천</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- 구조화된 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://val-calculator.vercel.app/#website",
+      "url": "https://val-calculator.vercel.app/",
+      "name": "택스헬퍼 - 부가세 계산기",
+      "description": "부가세 계산기로 공급가액과 세금을 빠르게 계산하고, 국세·지방세 납부 시 혜택받는 사업자카드를 추천받으세요!",
+      "inLanguage": "ko-KR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "택스헬퍼"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "부가세 계산기",
+      "url": "https://val-calculator.vercel.app/",
+      "description": "공급가액과 부가세를 쉽고 빠르게 계산하세요",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "featureList": [
+        "부가세 포함 금액에서 공급가액 계산",
+        "공급가액에서 부가세 포함 금액 계산",
+        "사업자카드 추천"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "부가세란 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "부가가치세(VAT)는 상품이나 서비스 거래 시 부과되는 세금으로, 10%가 적용됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "부가세 계산 공식은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "부가세 = 공급가액 × 10%, 합계 = 공급가액 + 부가세, 공급가액 = 합계 ÷ 1.1 입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "부가세 신고 기간은 언제인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1기(1~6월)는 7월 1일 ~ 7월 25일, 2기(7~12월)는 다음해 1월 1일 ~ 1월 25일입니다."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://val-calculator.vercel.app/"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
