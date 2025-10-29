@@ -129,6 +129,27 @@ header h1 {
     margin-bottom: 30px;
 }
 
+/* Tab Guide */
+.tab-guide {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.guide-hint {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: inline-block;
+    margin-left: 8px;
+}
+
 /* Tabs */
 .tabs {
     display: flex;
@@ -142,8 +163,8 @@ header h1 {
 .tab-btn {
     flex: 1;
     padding: 16px 20px;
-    background: transparent;
-    border: 2px solid transparent;
+    background: white;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     color: var(--text-secondary);
     font-size: 1rem;
@@ -151,12 +172,15 @@ header h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .tab-btn:hover {
     color: var(--primary-color);
     background-color: rgba(59, 130, 246, 0.05);
-    border-color: rgba(59, 130, 246, 0.2);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
 }
 
 .tab-btn.active {
@@ -164,6 +188,7 @@ header h1 {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
     border-color: var(--primary-color);
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
 }
 
 /* Tab Content */
@@ -629,6 +654,19 @@ footer p {
 
     .calculator-card {
         padding: 20px 15px;
+    }
+
+    .tab-guide {
+        font-size: 1rem;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+    }
+
+    .guide-hint {
+        display: block;
+        margin-top: 5px;
+        margin-left: 0;
+        font-size: 0.85rem;
     }
 
     .tabs {
